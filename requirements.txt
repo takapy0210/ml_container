@@ -1,0 +1,82 @@
+# standard
+pandas
+setuptools==47.3.1
+numpy
+scipy
+scikit-learn
+category_encoders
+tqdm
+pyyaml
+swifter
+umap-learn
+# visual
+plotly
+matplotlib
+seaborn
+altair
+streamlit
+gradio
+pandas-profiling
+shap
+pydotplus
+graphviz
+matplotlib-venn
+sweetviz
+klib
+quickda
+japanize_matplotlib
+adjusttext
+# GBDT
+lightgbm
+xgboost
+catboost
+optuna
+# NN
+tensorflow
+tensorflow-addons
+# tensorflow-recommenders
+torch
+# NLP
+gensim
+mecab-python3
+neologdn
+spacy
+ginza
+sudachipy
+sudachidict_core
+sudachidict_full
+nlplot
+nltk
+transformers
+texthero
+sumy
+janome
+pyknp
+sentencepiece
+# cloud
+boto3
+google-cloud-bigquery
+# jupyter
+jupyter-kite
+jupyterlab-git
+xeus-python
+nbdime
+nbresuse
+# 株価分析
+pyti
+TA-Lib
+# other
+fire
+mlflow
+kaggle
+flake8
+jpholiday
+voila
+voila-gridstack
+icecream
+# scraping
+beautifulsoup4
+# web
+Flask
+fastapi
+uvicorn
