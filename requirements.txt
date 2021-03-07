@@ -74,6 +74,9 @@ jpholiday
 voila
 voila-gridstack
 icecream
+geopy
+pycld2
+googletrans
 # scraping
 beautifulsoup4
 # web

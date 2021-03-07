@@ -8,7 +8,9 @@ x-template: &template
     - ./working:/opt/program/working:cached
     - ~/.kaggle:/root/.kaggle:cached
     - /Users/takapy/working/python/udemy/RecommenderSystems/recommenders:/opt/program/working/udemy/RecommenderSystems:cached
-    - ~/working/python/competition/mlflow:/opt/program/mlflow:cached
+    - /Users/takapy/working/python/competition/mlflow/mlruns:/opt/program/mlflow/mlruns:cached
+    - /Users/takapy/working/python/competition/ProbSpace/youtube:/opt/program/working/ProbSpace_youtube:cached
+    - /Users/takapy/working/python/competition/atmaCup/vol9:/opt/program/working/atmaCup_vol9:cached
     - /Users/takapy/working/python/competition/atmaCup/vol10:/opt/program/working/atmaCup_vol10:cached
     - /Users/takapy/working/python/competition/signate/jpx:/opt/program/working/signate/jpx:cached
     - /Users/takapy/working/repository/geek_blog:/opt/program/working/geek_blog:cached

@@ -88,9 +88,15 @@ RUN pip3 install -r /tmp/requirements.txt && \
     rm /tmp/requirements.txt && \
     rm -rf /root/.cache
 
+RUN sudachipy link -t full
+RUN git clone https://github.com/K-PTL/noglobal-python
+RUN git clone https://github.com/facebookresearch/fastText.git && \
+    cd fastText && \
+    pip3 install .
+
 # takaggle
 # 頻繁に更新するので個別でインストール
-RUN pip3 install -U git+https://github.com/takapy0210/takaggle@v1.0.13 && \
+RUN pip3 install -U git+https://github.com/takapy0210/takaggle@v1.0.24 && \
     rm -rf /root/.cache
 
 # tensorflowのログレベルをERRORのみに設定
