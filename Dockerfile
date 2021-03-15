@@ -66,16 +66,14 @@ RUN tar -zxvf ta-lib-0.4.0-src.tar.gz && \
 
 # jupyter lab
 RUN pip3 install -U pip && \
-    # pip3 install jupyterlab==2.2.9 && \
-    # pip3 install jupyterlab-git==0.23.2 && \
-    pip3 install jupyterlab && \
+    pip3 install jupyterlab==3.0.10 && \
     pip3 install jupyterlab-git && \
     mkdir ~/.jupyter
 COPY ./jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 RUN export NODE_OPTIONS=--max-old-space-size=4096
 RUN jupyter serverextension enable --py jupyterlab && \
     jupyter labextension install --no-build @jupyterlab/toc && \
-    # jupyter labextension install --no-build jupyterlab-plotly && \ # The extension "jupyterlab-plotly" does not yet support the current version of JupyterLab.
+    jupyter labextension install --no-build jupyterlab-plotly && \
     # jupyter labextension install --no-build jupyterlab-flake8 && \
     jupyter labextension install --no-build jupyterlab-topbar-extension jupyterlab-system-monitor && \
     jupyter labextension install --no-build @jupyter-widgets/jupyterlab-manager && \
@@ -96,7 +94,7 @@ RUN git clone https://github.com/facebookresearch/fastText.git && \
 
 # takaggle
 # 頻繁に更新するので個別でインストール
-RUN pip3 install -U git+https://github.com/takapy0210/takaggle@v1.0.24 && \
+RUN pip3 install -U git+https://github.com/takapy0210/takaggle@v1.0.27 && \
     rm -rf /root/.cache
 
 # tensorflowのログレベルをERRORのみに設定

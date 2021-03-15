@@ -26,6 +26,7 @@ klib
 quickda
 japanize_matplotlib
 adjusttext
+shapash
 # GBDT
 lightgbm
 xgboost
