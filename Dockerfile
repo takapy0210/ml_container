@@ -47,13 +47,6 @@ ENV LC_ALL=ja_JP.UTF-8
 # Timezone jst
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-# kite
-RUN cd && \
-    wget https://linux.kite.com/dls/linux/current && \
-    chmod 777 current && \
-    sed -i 's/"--no-launch"//g' current > /dev/null && \
-    ./current --install ./kite-installer
-
 # TA-Lib
 RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
 RUN tar -zxvf ta-lib-0.4.0-src.tar.gz && \
@@ -66,7 +59,7 @@ RUN tar -zxvf ta-lib-0.4.0-src.tar.gz && \
 
 # jupyter lab
 RUN pip3 install -U pip && \
-    pip3 install jupyterlab==3.0.10 && \
+    pip3 install jupyterlab==3.0.16 && \
     pip3 install jupyterlab-git && \
     mkdir ~/.jupyter
 COPY ./jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
@@ -77,20 +70,18 @@ RUN jupyter serverextension enable --py jupyterlab && \
     # jupyter labextension install --no-build jupyterlab-flake8 && \
     jupyter labextension install --no-build jupyterlab-topbar-extension jupyterlab-system-monitor && \
     jupyter labextension install --no-build @jupyter-widgets/jupyterlab-manager && \
-    jupyter labextension install --no-build @kiteco/jupyterlab-kite && \
     jupyter labextension install --no-build @jupyterlab/debugger && \
     jupyter lab build
 
-COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install -r /tmp/requirements.txt && \
-    rm /tmp/requirements.txt && \
-    rm -rf /root/.cache
-
-RUN sudachipy link -t full
 RUN git clone https://github.com/K-PTL/noglobal-python
 RUN git clone https://github.com/facebookresearch/fastText.git && \
     cd fastText && \
     pip3 install .
+
+COPY requirements.lock /tmp/requirements.lock
+RUN pip3 install -r /tmp/requirements.lock && \
+    rm /tmp/requirements.lock && \
+    rm -rf /root/.cache
 
 # takaggle
 # 頻繁に更新するので個別でインストール

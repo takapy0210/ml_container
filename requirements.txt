@@ -61,7 +61,6 @@ google-cloud-bigquery
 jupyter-kite
 jupyterlab-git
 xeus-python
-nbdime
 nbresuse
 # 株価分析
 pyti

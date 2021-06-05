@@ -16,6 +16,7 @@ x-template: &template
     - /Users/takapy/working/repository/geek_blog:/opt/program/working/geek_blog:cached
     - /Users/takapy/working/book/Handson_ML_with_ScikitLearn_and_TensorFlow_v2/handson-ml2:/opt/program/working/handson-ml2:cached
     - /Users/takapy/working/repository/nlp_recipe:/opt/program/working/nlp_recipe:cached
+    - /Users/takapy/working/repository/nlp_2020:/opt/program/working/nlp_2020:cached
   env_file:
     - .env
 
