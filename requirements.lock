@@ -71,7 +71,7 @@ fsspec==0.8.7
 funcy==1.15
 future==0.18.2
 gast==0.3.3
-gensim==3.8.3
+gensim==4.0.1
 geographiclib==1.50
 geopy==2.1.0
 ginza==4.0.5
