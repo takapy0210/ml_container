@@ -1,6 +1,7 @@
 # standard
 pandas
-setuptools==47.3.1
+# setuptools==47.3.1
+setuptools
 numpy
 scipy
 scikit-learn
@@ -35,7 +36,7 @@ optuna
 # NN
 tensorflow
 tensorflow-addons
-# tensorflow-recommenders
+tensorflow-recommenders
 torch
 # NLP
 gensim
@@ -58,7 +59,6 @@ sentencepiece
 boto3
 google-cloud-bigquery
 # jupyter
-jupyter-kite
 jupyterlab-git
 xeus-python
 nbresuse
