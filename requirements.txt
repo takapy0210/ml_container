@@ -1,6 +1,5 @@
 # standard
 pandas
-# setuptools==47.3.1
 setuptools
 numpy
 scipy
@@ -28,6 +27,7 @@ quickda
 japanize_matplotlib
 adjusttext
 shapash
+lux-api
 # GBDT
 lightgbm
 xgboost
@@ -37,6 +37,7 @@ optuna
 tensorflow
 tensorflow-addons
 tensorflow-recommenders
+tensorflow_similarity
 torch
 # NLP
 gensim
@@ -55,6 +56,7 @@ sumy
 janome
 pyknp
 sentencepiece
+pyLDAvis
 # cloud
 boto3
 google-cloud-bigquery

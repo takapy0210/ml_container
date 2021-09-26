@@ -67,6 +67,8 @@ COPY ./jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 RUN export NODE_OPTIONS=--max-old-space-size=4096
 RUN jupyter serverextension enable --py jupyterlab && \
     jupyter labextension install --no-build jupyterlab-plotly && \
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager && \
+    jupyter labextension install luxwidget && \
     # jupyter labextension install --no-build @jupyterlab/toc && \
     # jupyter labextension install --no-build jupyterlab-flake8 && \
     # jupyter labextension install --no-build jupyterlab-topbar-extension jupyterlab-system-monitor && \
