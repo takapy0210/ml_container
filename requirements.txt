@@ -53,8 +53,8 @@ nltk
 transformers
 texthero
 sumy
-janome
-pyknp
+# janome
+# pyknp
 sentencepiece
 pyLDAvis
 # cloud
